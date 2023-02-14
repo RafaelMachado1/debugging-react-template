@@ -8,9 +8,9 @@ export const Post = (props) => {
     <PostContainer className={"post-container"}>
       <p>{props.post.texto}</p>
       <button onClick={() => props.alterarCurtida()}>
-        {props.post.curtida ? "Descurtir" : "Curtir"}
+        {props.post.curtido ? "Descurtir" : "Curtir"}
       </button>
-      <button onClick={() => props.apagaPost()}>Apagar</button>
+      <button onClick={() => props.apagarPost()}>Apagar</button>
       
       {/* Exercício final de debug. Descomentar só depois de finalizar o debug de post*/}
       {/* <Comentario
