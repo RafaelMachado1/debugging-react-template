@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./App.css";
-import Post from "./componetns/Post";
+
+import {Post} from "./components/Post/Post";
 
 //!! Os trechos comentados fazem parte do exercício final !!
 // !!!!! não descomentar ou modificar até lá !!!!!
@@ -27,14 +27,14 @@ export default function App() {
 
   const apagarPost = () => {
     // Apaga o post enviado
-    setPost()
+    setPost({})
   }
 
   const alterarCurtida = () => {
     // Altera o status de curtida do post
     const alterarCurtida = {
       ...post,
-      curtido: post.curtido
+      curtido: !post.curtido
     }
     setPost(alterarCurtida)
   }
@@ -65,7 +65,7 @@ export default function App() {
       <br />
       <Post
         post={post}
-        alteraCurtida={alterarCurtida}
+        alterarCurtida={alterarCurtida}
         apagarPost={apagarPost}
         // onChangeComentarios={onChangeComentario}
         // adicionaComentarios={adicionaComentario}
